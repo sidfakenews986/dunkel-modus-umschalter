@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const isLightMode = document.body.classList.contains('light');
         document.body.classList.toggle('light', !isLightMode);
         document.body.classList.toggle('dark', isLightMode);
-        localStorage.setItem('theme', isLightMode ? 'dark' : 'light');
-        toggleButton.textContent = isLightMode ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+        localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
+        toggleButton.textContent = isLightMode ? 'Switch to Dark Mode' : 'Switch to Light Mode';
     });
 });
