@@ -7,7 +7,15 @@ body.light {
     color: black;
 }
 
+body.light:hover {
+    background-color: #f0f0f0;
+}
+
 body.dark {
     background-color: black;
     color: white;
+}
+
+body.dark:hover {
+    background-color: #333;
 }
