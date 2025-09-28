@@ -4,16 +4,10 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.classList.add(currentTheme);
 
     toggleButton.addEventListener('click', function() {
-        if (document.body.classList.contains('light')) {
-            document.body.classList.remove('light');
-            document.body.classList.add('dark');
-            localStorage.setItem('theme', 'dark');
-            toggleButton.textContent = 'Switch to Light Mode';
-        } else {
-            document.body.classList.remove('dark');
-            document.body.classList.add('light');
-            localStorage.setItem('theme', 'light');
-            toggleButton.textContent = 'Switch to Dark Mode';
-        }
+        const isLightMode = document.body.classList.contains('light');
+        document.body.classList.toggle('light', !isLightMode);
+        document.body.classList.toggle('dark', isLightMode);
+        localStorage.setItem('theme', isLightMode ? 'dark' : 'light');
+        toggleButton.textContent = isLightMode ? 'Switch to Light Mode' : 'Switch to Dark Mode';
     });
 });
