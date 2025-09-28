@@ -8,12 +8,12 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.classList.remove('light');
             document.body.classList.add('dark');
             localStorage.setItem('theme', 'dark');
-            toggleButton.textContent = 'Wechsel zu Dunkel-Modus';
+            toggleButton.textContent = 'Switch to Light Mode';
         } else {
             document.body.classList.remove('dark');
             document.body.classList.add('light');
             localStorage.setItem('theme', 'light');
-            toggleButton.textContent = 'Wechsel zu Hell-Modus';
+            toggleButton.textContent = 'Switch to Dark Mode';
         }
     });
 });
